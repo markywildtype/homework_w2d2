@@ -1,6 +1,8 @@
 require("minitest/autorun")
 require("minitest/rg")
 require_relative("../bear.rb")
+require_relative("../fish.rb")
+require_relative("../river.rb")
 
 class TestBear < Minitest::Test
 
@@ -24,12 +26,10 @@ class TestBear < Minitest::Test
     @thames.add_fish(@salmon)
     @thames.add_fish(@trout)
     @thames.add_fish(@haddock)
-    @yogi.get_fish_from_river
-
-
+    @yogi.get_fish_from_river(@thames, @salmon)
 
     assert_equal([@salmon], @yogi.stomach_contents)
-    assert_equal([@salmon, @haddock], @thames.fishes)
+    assert_equal([@trout, @haddock], @thames.fishes)
   end
 
 end
