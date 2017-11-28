@@ -12,4 +12,8 @@ attr_reader :name, :stomach_contents
     river.remove_fish(fish)
   end
 
+  def bear_roar()
+    return "ROAR!"
+  end
+
 end
