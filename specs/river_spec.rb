@@ -7,15 +7,15 @@ class TestRiver < Minitest::Test
 
   def setup
     @pike = Fish.new("Pike")
+    @salmon = Fish.new("Salmon")
+    @trout = Fish.new("Trout")
+    @haddock = Fish.new("Haddock")
     @amazon = River.new("Amazon", [])
   end
 
   def test_add_fish_to_river
     @amazon.add_fish(@pike)
-    # fish_in_river = @amazon.fishes() #should give the array of fish in the amazon
-    # actual = fish_in_river.count()
-    # assert_equal(1, @amazon.fishes().count)
-    assert_equal(["Pike"], @amazon.fishes())
+    assert_equal([@pike], @amazon.fishes())
   end
 
   # def test_fish_in_river
