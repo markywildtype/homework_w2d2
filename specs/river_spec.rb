@@ -31,4 +31,11 @@ class TestRiver < Minitest::Test
     assert_equal(2, @amazon.fishes().count())
   end
 
+  def test_fish_count
+    @amazon.add_fish(@pike)
+    @amazon.add_fish(@trout)
+    @amazon.add_fish(@haddock)
+    assert_equal(3, @amazon.fish_count())
+  end
+
 end

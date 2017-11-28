@@ -30,4 +30,8 @@ attr_reader :river_name, :fishes
     @fishes.delete_at(index)
   end
 
+  def fish_count()
+    @fishes.count()
+  end
+
 end
