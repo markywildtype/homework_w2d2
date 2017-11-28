@@ -16,4 +16,8 @@ attr_reader :name, :stomach_contents
     return "ROAR!"
   end
 
+  def food_count()
+    @stomach_contents.count()
+  end
+
 end

@@ -35,4 +35,13 @@ class TestBear < Minitest::Test
     assert_equal("ROAR!" , @yogi.bear_roar())
   end
 
+  def test_food_count
+    @thames.add_fish(@salmon)
+    @thames.add_fish(@trout)
+    @thames.add_fish(@haddock)
+    @yogi.get_fish_from_river(@thames, @salmon)
+    @yogi.get_fish_from_river(@thames, @haddock)
+    assert_equal(2, @yogi.food_count())
+  end
+
 end
