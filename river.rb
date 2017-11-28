@@ -19,4 +19,15 @@ attr_reader :river_name, :fishes
     end
   end
 
+  def remove_fish(fish_to_remove)
+    index = 0
+    for fish in @fishes
+      if fish == fish_to_remove
+        break
+      end
+        index += 1
+    end
+    @fishes.delete_at(index)
+  end
+
 end
