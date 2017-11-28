@@ -18,9 +18,9 @@ class TestRiver < Minitest::Test
     assert_equal([@pike], @amazon.fishes())
   end
 
-  # def test_fish_in_river
-  #
-  #   assert_equal("Pike", @amazon.fishes)
-  # end
+  def test_fish_in_river
+    @amazon.add_fish(@salmon)
+    assert_equal(true, @amazon.fish_in_river(@salmon))
+  end
 
 end
